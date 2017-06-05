@@ -1,0 +1,192 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	background: rgb(240,240,240);
+	color: white;
+	font-family: 'El Messiri', sans-serif;
+	font-size: 18px;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+h1 {
+	color: rgba(40,40,40,.1);
+	font-size: 30px;
+	font-family: 'Exo 2', sans-serif;
+	letter-spacing: 10px;
+	margin: 25px 0 0 110px;
+	position: absolute;
+	text-align: center;
+	text-transform: uppercase;
+	word-spacing: 15px;
+	z-index: 10;
+}
+
+p {
+	font-size: 18px;
+	letter-spacing: 2px;
+	line-height: 35px;
+	text-align: justify;
+	text-indent: 50px;
+	text-transform: uppercase;
+	word-spacing: 4px;
+}
+
+a {
+	font-size: 12px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: white;
+}
+a:hover {
+	color: rgba(40,40,40,.5);
+}
+
+#mainContainer {
+    background: url("../img/desert.jpg") top center/cover no-repeat;
+    position: fixed;
+	top: 0; right: 0; bottom: 0; left: 0;
+}
+
+#mainContainer > .content {
+	background: rgba(40,40,40,.2);
+	position: fixed;
+	top: 0; right: 0; bottom: 0; left: 0;
+	margin: 5%;
+}
+
+#mainContainer .content .symbol {
+	color: rgba(40,40,40,.2);
+	font-size: 240px;
+	font-family: Arial;
+	position: absolute;
+}
+
+#mainContainer .content .quoteLeft {
+	top: -25px;
+	left: 8px;
+}
+
+#mainContainer .content .quoteLeft::after {
+	content: '\201c';
+}
+
+#mainContainer .content .quoteRight {
+	bottom: -160px;
+	color: rgba(40,40,40,.5);
+	right: 5px;
+}
+
+#mainContainer .content .quoteRight::after {
+	content: '\201d';
+}
+
+#quoteContainer {
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	margin: 10%;
+	overflow-y: auto;
+	z-index: 2;
+	padding-right: 10px;
+}
+
+#quoteContainer p {
+	color: rgba(255,255,255,0);
+	text-decoration: none;
+	transition: 1.5s ease-out .4s;
+	z-index: 100;
+}
+
+#quoteContainer p.quoteBy {
+	color: rgba(255,255,255,0);
+	font-weight: bold;
+	text-align: right;
+	line-height: 0;
+}
+
+#quoteContainer p.quoteBy .content {
+	margin-left: 45px;
+	font-size: 14px;
+	font-weight: lighter;
+	font-family: 'Exo 2',sans-serif;
+}
+
+#quoteContainer p.quoteBy .line {
+	border-bottom: 2px solid rgba(255,255,255,0);
+	width: 30px;
+	position: absolute;
+}
+
+#links {
+	background-color: rgba(255,255,255,.5);
+	color: black;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+}
+#links .tweetContainer {
+	text-align: right;
+	margin-right: 180px;
+	padding: 5px 0;
+	height: 75px;
+}
+#links .tweetContainer i {
+	color: rgba(40,40,40,.3);
+	font-size: 75px;
+	position: absolute;
+	transition: .2s;
+}
+#links .tweetContainer i:hover {
+	color: rgba(42,120,235,1);
+}
+
+#links .nextQuote {
+	height: 100%;
+	margin-left: 20px;
+	position: absolute;
+}
+
+#links .nextQuote p {
+	color: rgba(40,40,40,.5);
+	font-family: 'Exo 2';
+	font-weight: bold;
+	font-size: 25px;
+	line-height: 0;
+	padding: 16px;
+	cursor: pointer;
+	text-indent: 0;
+	transition: .1s;
+}
+
+#links .nextQuote p:hover {
+	color: rgb(40,40,40);
+}
+
+#circle {
+	background: rgba(255,255,0,.9);
+	box-shadow: 0px 0px 1500px 280px rgba(240,200,0,.9);
+	border-radius: 100%;
+	height: 100px;
+	width: 100px;
+	position: fixed;
+	top: 1200px;
+	left: 800px;
+	transition: 1.5s;
+}
+
+#footer {
+    font-family: 'Exo 2', sans-serif;
+	font-size: 12px;
+	position: absolute;
+	bottom: 30px;
+	left: 52px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
