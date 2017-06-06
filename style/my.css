@@ -150,7 +150,7 @@ a:hover {
 	font-size: 65px;
 	animation-name: flying, moving;
 	animation-duration: .1s, 6s;
-	animation-delay: 2s;
+	animation-delay: 3s;
 	animation-timing-function: linear;
 	animation-iteration-count: 60, 1;
 	animation-fill-mode: forwards;
