@@ -138,13 +138,23 @@ a:hover {
 	height: 75px;
 }
 #links .tweetContainer i {
-	color: rgba(40,40,40,.3);
+	color: rgba(40,40,40,1);
 	font-size: 75px;
 	position: absolute;
 	transition: .2s;
 }
-#links .tweetContainer i:hover {
-	color: rgba(42,120,235,1);
+
+#links .tweetContainer > a > i {
+	color: transparent;
+	transform: rotate(20deg);
+	font-size: 65px;
+	animation-name: flying, moving;
+	animation-duration: .1s, 6s;
+	animation-delay: 2s;
+	animation-timing-function: linear;
+	animation-iteration-count: 60, 1;
+	animation-fill-mode: forwards;
+	padding-top: 2px;
 }
 
 #links .nextQuote {
@@ -190,3 +200,52 @@ a:hover {
 	letter-spacing: 2px;
 	text-transform: uppercase;
 }
+
+/* Classes ================ */
+	.disabled {
+		   pointer-events: none;
+		   cursor: default;
+		   opacity: .5;
+		}
+/* Classes ends =========== */
+
+/* Animations ============= */
+	@keyframes flying {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(20deg);
+		}
+	}
+
+	@keyframes moving {
+		0% {
+			color: rgba(40,40,40,.9);
+			margin-top: 0px;
+			margin-left: -1000px;
+		}
+		25% {
+			margin-top: 100px;
+			margin-left: -950px;
+		}
+		50% {
+			margin-top: -100px;
+			margin-left: -800px;
+		}
+		65% {
+			margin-top: 80px;
+			margin-left: -550px;
+		}
+		85% {
+			margin-top: -100px;
+			margin-left: -250px;
+		}
+		100% {
+			margin-top: 0;
+			margin-left: 0;
+			color: rgba(40,40,40,.9);
+		}
+	}
+	
+/* Animations Ends ======== */
